@@ -1,7 +1,14 @@
+const common = require('./core/utils/common')
 const json = require('./core/utils/json')
 const Rate = require('./model/Rate')
+
 const rate = new Rate()
 
-const data = json.getData('./data/rates.json')
+const data = json.data('./data/rates.json')
 
-rate.insert(['usd', 1.0, 2.0, 3.0, 4.0]) 
+// data.forEach(el => {
+//   const arr = common.objectToArray(el, true)
+//   rate.insert(arr)
+// })
+
+rate.select()

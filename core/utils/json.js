@@ -1,4 +1,4 @@
-module.exports.getData = (file) => {
+module.exports.data = (file) => {
   const fs = require('fs')
   try { 
     const json = fs.readFileSync(file, 'utf8');
